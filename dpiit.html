@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPIIT Recognition - ElvonAxis Solutions | Startup India Registration</title>
+    <meta name="description" content="Get DPIIT recognition for your startup. Avail tax exemptions, seed funding up to ₹70 Lakhs, IPR benefits, and government support.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* DPIIT Page Specific Styles */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .benefit-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .benefit-icon {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+        }
+        
+        .benefit-icon i {
+            font-size: 28px;
+            color: white;
+        }
+        
+        .benefit-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .process-step {
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-weight: 800;
+            font-size: 20px;
+        }
+        
+        .process-step i {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .process-step h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .process-step p {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+        
+        .funding-box {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border-radius: 24px;
+            padding: 50px;
+            color: white;
+            text-align: center;
+        }
+        
+        .funding-box > i {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .funding-box h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .funding-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .funding-item {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+        }
+        
+        .funding-item i {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .funding-item h3 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        
+        .funding-note {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .funding-note p {
+            margin: 8px 0;
+        }
+        
+        .funding-note i {
+            color: #22c55e;
+            margin-right: 8px;
+        }
+        
+        .guarantee-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .comparison-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .comparison-card.without {
+            border-top: 5px solid #ef4444;
+        }
+        
+        .comparison-card.with {
+            border-top: 5px solid #22c55e;
+        }
+        
+        .comparison-list {
+            list-style: none;
+        }
+        
+        .comparison-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .comparison-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .comparison-list .cross {
+            color: #ef4444;
+            font-size: 18px;
+        }
+        
+        .comparison-list .tick {
+            color: #22c55e;
+            font-size: 18px;
+        }
+        
+        .eligibility-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .eligibility-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .eligibility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .eligibility-card i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .eligibility-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .eligibility-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .why-card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .why-card i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .why-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .why-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .end-to-end {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .end-to-end i {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .end-to-end h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .cta-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cta-content > i {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .cta-content h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-content p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+        
+        .apply-btn {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+        }
+        
+        .trust-badges {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .trust-badges i {
+            margin: 0 5px;
+        }
+        
+        @media (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-steps {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+            .eligibility-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            .funding-grid {
+                grid-template-columns: 1fr;
+            }
+            .eligibility-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-content h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <img src="logo.png" class="logo-img" alt="ElvonAxis Solutions Logo">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="dpiit.html" class="active">DPIIT</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="cta-btn desktop-btn">Get Started</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918855817276" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- DPIIT HERO -->
+<section class="dpiit-hero">
+    <div class="container">
+        <div class="hero-content animate-on-scroll">
+            <div class="hero-badge">
+                <i class="fas fa-award"></i>
+                Government of India Initiative
+            </div>
+            <h1>Get Your Startup Recognized by Government of India</h1>
+            <p>Unlock exclusive government benefits, tax exemptions, and funding opportunities for your startup. Get official recognition from Department for Promotion of Industry and Internal Trade.</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn-primary">Apply for DPIIT</a>
+                <a href="#benefits" class="btn-secondary">Explore Benefits</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT IS DPIIT -->
+<section class="section">
+    <div class="container">
+        <div class="about-header animate-on-scroll">
+            <h2 class="section-title">What is DPIIT Recognition?</h2>
+            <p class="section-subtitle">DPIIT (Department for Promotion of Industry and Internal Trade) recognition is an official status granted by the Government of India to startups that meet specific criteria of innovation and scalability.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 8 KEY BENEFITS -->
+<section id="benefits" class="section bg-alt">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">8 Key Benefits of DPIIT Recognition</h2>
+        <p class="section-subtitle animate-on-scroll delay-1">Unlock exclusive government benefits and accelerate your startup growth</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card zoom-on-scroll delay-1">
+                <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Tax Exemption</h3>
+                <p>100% income tax exemption for 3 consecutive years under Section 80-IAC</p>
+            </div>
+            <div class="benefit-card zoom-on-scroll delay-2">
+                <div class="benefit-icon"><i class="fas fa-rupee-sign"></i></div>
+                <h3>Seed Funding</h3>
+                <p>Grant + Debt funding under Startup India Seed Fund Scheme for your startup growth</p>
+            </div>
+            <div class="benefit-card zoom-on-scroll delay-3">
+                <div class="benefit-icon"><i class="fas fa-trademark"></i></div>
+                <h3>IPR Subsidy</h3>
+                <p>Major rebate on patent and trademark registration for your startup</p>
+            </div>
+            <div class="benefit-card zoom-on-scroll delay-4">
+                <div class="benefit-icon"><i class="fas fa-building"></i></div>
+                <h3>Collateral Free Loans</h3>
+                <p>MUDRA and CGTMSE scheme - Easy credit with no collateral required</p>
+            </div>
+            <div class="benefit-card zoom-on-scroll delay-5">
+                <div class="benefit-icon"><i class="fas fa-flask"></i></div>
+                <h3>R&D Support</h3>
+                <p>Major R&D cost borne by Government of India for approved innovation projects</p>
+            </div>
+            <div class="benefit-card zoom-on-scroll delay-6">
+                <div class="benefit-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Investor Access</h3>
+                <p>Priority access to angel investor network and VC connect</p>
+            </div>
+            <div class="benefit-card zoom-on-scroll delay-7">
+                <div class="benefit-icon"><i class="fas fa-gavel"></i></div>
+                <h3>Government Tenders</h3>
+                <p>100% EMD exemption and fast-track processing in government tenders</p>
+            </div>
+            <div class="benefit-card zoom-on-scroll delay-8">
+                <div class="benefit-icon"><i class="fas fa-file-alt"></i></div>
+                <h3>Easy Compliance</h3>
+                <p>Self-certification under labour & environmental laws for 3-5 years</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW TO GET DPIIT CERTIFICATE -->
+<section class="section">
+    <div class="container">
+        <div class="assistance-card animate-on-scroll" style="background: linear-gradient(135deg, rgba(37,99,235,0.05), rgba(249,115,22,0.05)); border-radius: 24px; padding: 50px; text-align: center;">
+            <div class="assurance-badge" style="display: inline-block; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 600; margin-bottom: 20px;">
+                <i class="fas fa-certificate"></i> DPIIT Recognition Process
+            </div>
+            <h2 style="font-size: 32px; margin-bottom: 20px;">How to Get DPIIT Certificate</h2>
+            <p style="margin-bottom: 40px;">Simple 5-step process with expert assistance</p>
+            
+            <div class="process-steps">
+                <div class="process-step zoom-on-scroll delay-1">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-search"></i>
+                    <h4>Check Eligibility</h4>
+                    <p>Verify if your startup meets DPIIT criteria</p>
+                </div>
+                <div class="process-step zoom-on-scroll delay-2">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-file-alt"></i>
+                    <h4>Document Preparation</h4>
+                    <p>Prepare incorporation certificate, PAN, KYC</p>
+                </div>
+                <div class="process-step zoom-on-scroll delay-3">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-upload"></i>
+                    <h4>Apply on Portal</h4>
+                    <p>Submit application on Startup India portal</p>
+                </div>
+                <div class="process-step zoom-on-scroll delay-4">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-building"></i>
+                    <h4>Government Review</h4>
+                    <p>DPIIT evaluates your application</p>
+                </div>
+                <div class="process-step zoom-on-scroll delay-5">
+                    <div class="step-number">5</div>
+                    <i class="fas fa-certificate"></i>
+                    <h4>Get Certificate</h4>
+                    <p>Receive DPIIT recognition certificate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEED FUNDING ASSISTANCE -->
+<section class="section bg-alt">
+    <div class="container">
+        <div class="funding-box animate-on-scroll">
+            <i class="fas fa-seedling"></i>
+            <h2>Seed Funding Assistance</h2>
+            <p>Under the Startup India Seed Fund Scheme (SISFS)</p>
+            
+            <div class="funding-grid">
+                <div class="funding-item zoom-on-scroll delay-1">
+                    <i class="fas fa-gift"></i>
+                    <h3>Grant Funding</h3>
+                    <p>Non-repayable funding</p>
+                    <small>For product validation, prototype development, and market testing</small>
+                </div>
+                <div class="funding-item zoom-on-scroll delay-2">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Debt Funding</h3>
+                    <p>For scaling operations</p>
+                    <small>For market expansion, commercialization, and easy repayment terms</small>
+                </div>
+            </div>
+            
+            <div class="funding-note">
+                <p><i class="fas fa-check-circle"></i> <strong>Complete assistance from application to interview</strong></p>
+            </div>
+            
+            <div class="guarantee-badge">
+                <i class="fas fa-star"></i> 100% Interview Preparation Guarantee
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DPIIT vs NON-DPIIT COMPARISON -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">DPIIT vs Non-DPIIT Comparison</h2>
+        <p class="section-subtitle animate-on-scroll delay-1">See how DPIIT recognition transforms your startup journey</p>
+        
+        <div class="comparison-grid">
+            <div class="comparison-card without animate-on-scroll delay-2">
+                <h3>❌ WITHOUT DPIIT</h3>
+                <ul class="comparison-list">
+                    <li><span class="cross"><i class="fas fa-times-circle"></i></span> Full Income Tax payable</li>
+                    <li><span class="cross"><i class="fas fa-times-circle"></i></span> No government funding access</li>
+                    <li><span class="cross"><i class="fas fa-times-circle"></i></span> Full patent & trademark fees</li>
+                    <li><span class="cross"><i class="fas fa-times-circle"></i></span> Collateral required for loans</li>
+                    <li><span class="cross"><i class="fas fa-times-circle"></i></span> No R&D cost support</li>
+                    <li><span class="cross"><i class="fas fa-times-circle"></i></span> No investor network access</li>
+                    <li><span class="cross"><i class="fas fa-times-circle"></i></span> EMD payment for tenders</li>
+                    <li><span class="cross"><i class="fas fa-times-circle"></i></span> Regular compliance filing</li>
+                    <li><span class="cross"><i class="fas fa-times-circle"></i></span> No government recognition</li>
+                </ul>
+            </div>
+            <div class="comparison-card with animate-on-scroll delay-3">
+                <h3>✅ WITH DPIIT RECOGNITION</h3>
+                <ul class="comparison-list">
+                    <li><span class="tick"><i class="fas fa-check-circle"></i></span> 100% Tax Exemption for 3 years</li>
+                    <li><span class="tick"><i class="fas fa-check-circle"></i></span> Grant + Debt funding available</li>
+                    <li><span class="tick"><i class="fas fa-check-circle"></i></span> Major rebate on IPR filing</li>
+                    <li><span class="tick"><i class="fas fa-check-circle"></i></span> Collateral free loans available</li>
+                    <li><span class="tick"><i class="fas fa-check-circle"></i></span> Major R&D cost borne by Government</li>
+                    <li><span class="tick"><i class="fas fa-check-circle"></i></span> Priority angel investor access</li>
+                    <li><span class="tick"><i class="fas fa-check-circle"></i></span> 100% EMD exemption</li>
+                    <li><span class="tick"><i class="fas fa-check-circle"></i></span> Self-certification for 3-5 years</li>
+                    <li><span class="tick"><i class="fas fa-check-circle"></i></span> Official DPIIT Certificate</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="center-btn animate-on-scroll delay-4">
+            <p style="margin-bottom: 20px; color: var(--text-secondary);">💡 DPIIT Recognition unlocks significant savings and benefits for your startup</p>
+            <a href="contact.html" class="btn-primary">Apply for DPIIT Today</a>
+        </div>
+    </div>
+</section>
+
+<!-- ELIGIBILITY CRITERIA -->
+<section class="section bg-alt">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Eligibility Criteria</h2>
+        <p class="section-subtitle animate-on-scroll delay-1">Check if your startup qualifies for DPIIT recognition</p>
+        
+        <div class="eligibility-grid">
+            <div class="eligibility-card animate-on-scroll delay-2">
+                <i class="fas fa-building"></i>
+                <h3>Registered Entity</h3>
+                <p>Private Limited, LLP, Partnership Firm, or Section 8 Company</p>
+            </div>
+            <div class="eligibility-card animate-on-scroll delay-3">
+                <i class="fas fa-calendar"></i>
+                <h3>Age of Company</h3>
+                <p>Less than 10 years from incorporation</p>
+            </div>
+            <div class="eligibility-card animate-on-scroll delay-4">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Turnover Limit</h3>
+                <p>Annual turnover should not exceed prescribed limit</p>
+            </div>
+            <div class="eligibility-card animate-on-scroll delay-5">
+                <i class="fas fa-chart-line"></i>
+                <h3>Scalable Business</h3>
+                <p>Potential for growth, innovation, and scalability</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE ELVONAXIS -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Why Choose ElvonAxis Solutions?</h2>
+        <p class="section-subtitle animate-on-scroll delay-1">Your trusted partner for startup registration and government benefits</p>
+        
+        <div class="why-choose-grid">
+            <div class="why-card zoom-on-scroll delay-2">
+                <i class="fas fa-layer-group"></i>
+                <h3>All-in-One Solutions</h3>
+                <p>From company registration to DPIIT to funding - everything in one place</p>
+            </div>
+            <div class="why-card zoom-on-scroll delay-3">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast & Hassle-Free</h3>
+                <p>Quick turnaround with minimal effort from your side</p>
+            </div>
+            <div class="why-card zoom-on-scroll delay-4">
+                <i class="fas fa-users"></i>
+                <h3>Expert Team Support</h3>
+                <p>Experienced professionals who understand government processes</p>
+            </div>
+            <div class="why-card zoom-on-scroll delay-5">
+                <i class="fas fa-rupee-sign"></i>
+                <h3>Affordable Pricing</h3>
+                <p>No hidden charges. Clear pricing structure for startups</p>
+            </div>
+        </div>
+        
+        <div class="end-to-end animate-on-scroll delay-6">
+            <i class="fas fa-handshake"></i>
+            <h3>End-to-End Assistance</h3>
+            <p>Complete support from application to approval - trusted by startups across India</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section bg-alt">
+    <div class="container">
+        <div class="cta-content">
+            <i class="fas fa-certificate"></i>
+            <h2>Get Your DPIIT Certificate Today!</h2>
+            <p>Start your startup journey with expert guidance and hassle-free processing</p>
+            <div class="cta-buttons">
+                <a href="tel:+918855817276" class="btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+                <a href="contact.html" class="btn-primary apply-btn"><i class="fas fa-envelope"></i> Apply Online</a>
+                <a href="https://wa.me/918855817276" class="btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <p class="trust-badges">
+                <i class="fas fa-clock"></i> Response within 2 hours | 
+                <i class="fas fa-lock"></i> 100% Confidential | 
+                <i class="fas fa-check-circle"></i> No hidden charges
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div>
+                <h3><i class="fas fa-rocket"></i> ElvonAxis Solutions</h3>
+                <p>Your trusted partner for business registration, compliance, DPIIT recognition, and growth since 2014.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/918855817276" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/elvonaxissolutions/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3><i class="fas fa-briefcase"></i> Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html"><i class="fas fa-building"></i> Company Registration</a></li>
+                    <li><a href="services.html"><i class="fas fa-certificate"></i> GST & Licenses</a></li>
+                    <li><a href="dpiit.html"><i class="fas fa-award"></i> DPIIT Recognition</a></li>
+                    <li><a href="services.html"><i class="fas fa-laptop-code"></i> Website Development</a></li>
+                    <li><a href="services.html"><i class="fas fa-chart-line"></i> Digital Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3><i class="fas fa-map-marker-alt"></i> Locations</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-map-pin"></i> Lahar Gird, Jhansi</a></li>
+                    <li><a href="#"><i class="fas fa-map-pin"></i> Delhi NCR</a></li>
+                    <li><a href="#"><i class="fas fa-map-pin"></i> Mumbai</a></li>
+                    <li><a href="#"><i class="fas fa-globe"></i> Pan India</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3><i class="fas fa-clock"></i> Support</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:+918855817276"><i class="fas fa-phone"></i> +91 88558 17276</a></li>
+                    <li><a href="mailto:elvonaxismanager@gmail.com"><i class="fas fa-envelope"></i> elvonaxismanager@gmail.com</a></li>
+                    <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="contact.html"><i class="fas fa-headset"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 ElvonAxis Solutions Pvt Ltd. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Sitemap</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const hamburger = document.querySelector(".hamburger");
+    
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("active");
+}
+
+// Scroll Animations - Mobile Friendly
+const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-left, .animate-right, .zoom-on-scroll');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
+        }
+    });
+}, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+animatedElements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

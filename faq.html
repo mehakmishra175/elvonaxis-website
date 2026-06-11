@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - ElvonAxis Solutions | Frequently Asked Questions</title>
+    <meta name="description" content="Find answers to common questions about company registration, GST, pricing, compliance, and digital services.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <img src="logo.png" class="logo-img" alt="Logo">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="dpiit.html">DPIIT</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="contact.html" class="cta-btn">Get Started</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/918855817276" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FAQ HERO -->
+    <section class="faq-hero">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <div class="hero-badge">
+                    <i class="fas fa-question-circle"></i> Frequently Asked Questions
+                </div>
+                <h1>How Can We Help You?</h1>
+                <p>Find quick answers to all your questions about our services and process</p>
+                <div class="hero-buttons">
+                    <a href="#faqSearch" class="btn-primary">Search FAQs</a>
+                    <a href="contact.html" class="btn-secondary">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEARCH BAR -->
+    <div class="container">
+        <div class="faq-search-box animate-on-scroll delay-1" id="faqSearch">
+            <input type="text" id="faqSearchInput" placeholder="Search your question... (e.g., GST, Trademark, Registration)" autocomplete="off">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="container">
+        <div class="faq-category-tabs animate-on-scroll delay-2">
+            <div class="faq-tab active" data-category="all"><i class="fas fa-list"></i> All</div>
+            <div class="faq-tab" data-category="registration"><i class="fas fa-building"></i> Registration</div>
+            <div class="faq-tab" data-category="startup"><i class="fas fa-rocket"></i> Startup India</div>
+            <div class="faq-tab" data-category="certifications"><i class="fas fa-certificate"></i> Certifications</div>
+            <div class="faq-tab" data-category="digital"><i class="fas fa-laptop-code"></i> Digital</div>
+            <div class="faq-tab" data-category="compliance"><i class="fas fa-shield-alt"></i> Compliance</div>
+        </div>
+    </div>
+
+    <!-- FAQ CONTENT -->
+    <section class="section">
+        <div class="container">
+            <div id="searchResultsContainer"></div>
+
+            <!-- REGISTRATION CATEGORY -->
+            <div id="category-registration" class="faq-category-wrapper animate-on-scroll delay-3" data-category="registration">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-building"></i></div>
+                    <h2 class="category-title">New Firm Registration</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is Sole Proprietorship and how long does it take?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Single owner business, minimal compliance. Registration within <strong>24 hours</strong>.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is Partnership Firm registration process?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>For 2-20 partners with partnership deed. Takes <strong>3-5 days</strong>.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is LLP and its benefits?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Limited Liability Partnership with corporate benefits. Takes <strong>7-10 days</strong>.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is Private Limited Company registration?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Most popular for startups. Takes <strong>7-10 days</strong>. Best for funding and VC investment.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is One Person Company (OPC)?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Private limited benefits for single owner. Takes <strong>7-10 days</strong>.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What documents are required for registration?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>PAN, Aadhaar, Photo, Address proof, Rental agreement + NOC from owner.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>Difference between LLP and Private Limited Company?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>LLP: Lower compliance. Pvt Ltd: Better for funding, higher credibility.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>Can foreign nationals register company in India?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Yes! Requires valid passport, visa, DIN. One Indian resident director mandatory.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STARTUP INDIA CATEGORY -->
+            <div id="category-startup" class="faq-category-wrapper animate-on-scroll delay-4" data-category="startup">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-rocket"></i></div>
+                    <h2 class="category-title">Startup India Program</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is Startup India Registration?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>DPIIT recognition for startups. Benefits: tax exemption, fast-track patent, easy funding.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>How much tax can I save with Startup India?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>100% income tax exemption on profits for 3 consecutive years.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>How to get Seed Funding under Startup India?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Eligible startups get grant + debt funding under Startup India Seed Fund Scheme.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What are the benefits of Startup India Certificate?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Tax exemption, seed funding, fast-track patents, R&D cost support by Government.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>Who is eligible for Startup India Registration?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Private Limited or LLP, incorporated within 10 years, annual turnover under limit.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CERTIFICATIONS CATEGORY -->
+            <div id="category-certifications" class="faq-category-wrapper animate-on-scroll delay-5" data-category="certifications">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-certificate"></i></div>
+                    <h2 class="category-title">Certifications & Licenses</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is MSME Udyam Registration?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Free registration for small businesses. Benefits: collateral-free loans, priority in govt tenders.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is ISO Certification?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>International quality standard certification. Types: 9001, 14001, 22000, 27001, 13485.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is FSSAI license?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Mandatory for all food businesses. Basic, State, and Central licenses based on turnover.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is Trademark Registration?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Legal protection for Brand name, Logo, Tagline, Sound mark, Color combinations.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is GEM Registration?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Government e-Marketplace for selling to govt departments. No tendering required.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is IEC Code?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Import Export Code mandatory for import/export of goods or services. Online process.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIGITAL CATEGORY -->
+            <div id="category-digital" class="faq-category-wrapper animate-on-scroll" data-category="digital">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h2 class="category-title">Digital Services</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>How long does website development take?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Business website: 2-3 weeks, E-commerce: 4-6 weeks, Custom app: 8-12 weeks.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is included in E-Commerce development?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Online store, payment gateway, product management, order tracking, inventory.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is included in Social Media Management?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Posts, daily engagement, monthly analytics, ad campaigns across platforms.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>Do you provide Logo Designing services?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Yes! Unique concepts, unlimited revisions, source files, brand guidelines.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>Do you provide SEO after website launch?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Yes! SEO packages available with monthly reports and ongoing optimization.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPLIANCE CATEGORY -->
+            <div id="category-compliance" class="faq-category-wrapper animate-on-scroll" data-category="compliance">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h2 class="category-title">Compliance & Taxation</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What are annual compliance requirements?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>ROC filing, Income Tax Return, GST returns, TDS returns, Director KYC.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What are penalties for late compliance?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>ROC: ₹100/day, GST: ₹50/day, Income Tax: Penalty applicable.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is GST and is it mandatory?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>Mandatory if turnover exceeds threshold, online selling, or inter-state business.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>Difference between GST, TDS, and Income Tax?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>GST: Tax on sales, TDS: Tax deducted on payments, Income Tax: Tax on annual profits.</p></div>
+                    </div>
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question"><span>What is NSIC Registration?</span><i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer"><p>National Small Industries Corporation registration. Benefits: Tender fee exemption.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HELP CARD -->
+            <div class="faq-help-card animate-on-scroll">
+                <i class="fas fa-headset" style="font-size: 48px; color: #2563eb; margin-bottom: 20px; display: inline-block;"></i>
+                <h3>Still have questions?</h3>
+                <p>Our experts are ready to help you 24/7. Get in touch with us anytime.</p>
+                <div class="faq-help-buttons">
+                    <a href="tel:+918855817276" class="btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/918855817276" class="btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="contact.html" class="btn-secondary"><i class="fas fa-envelope"></i> Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3><i class="fas fa-rocket"></i> ElvonAxis Solutions</h3>
+                    <p>Your trusted partner for business registration, compliance, DPIIT recognition, and growth since 2014.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/918855817276" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/elvonaxissolutions/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3><i class="fas fa-briefcase"></i> Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html"><i class="fas fa-building"></i> Company Registration</a></li>
+                        <li><a href="services.html"><i class="fas fa-certificate"></i> GST & Licenses</a></li>
+                        <li><a href="dpiit.html"><i class="fas fa-award"></i> DPIIT Recognition</a></li>
+                        <li><a href="services.html"><i class="fas fa-laptop-code"></i> Website Development</a></li>
+                        <li><a href="services.html"><i class="fas fa-chart-line"></i> Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3><i class="fas fa-map-marker-alt"></i> Locations</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-pin"></i> Lahar Gird, Jhansi</a></li>
+                        <li><a href="#"><i class="fas fa-map-pin"></i> Delhi NCR</a></li>
+                        <li><a href="#"><i class="fas fa-map-pin"></i> Mumbai</a></li>
+                        <li><a href="#"><i class="fas fa-globe"></i> Pan India</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3><i class="fas fa-clock"></i> Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+918855817276"><i class="fas fa-phone"></i> +91 88558 17276</a></li>
+                        <li><a href="mailto:elvonaxismanager@gmail.com"><i class="fas fa-envelope"></i> elvonaxismanager@gmail.com</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="contact.html"><i class="fas fa-headset"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 ElvonAxis Solutions Pvt Ltd. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Sitemap</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+            const hamburger = document.querySelector(".hamburger");
+            if (hamburger) hamburger.classList.toggle("active");
+        }
+
+        // FAQ Accordion Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                answer.classList.toggle('active');
+                icon.classList.toggle('rotate');
+            });
+        });
+
+        // Category Filter
+        const tabs = document.querySelectorAll('.faq-tab');
+        const categories = document.querySelectorAll('.faq-category-wrapper');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.dataset.category;
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                if (category === 'all') {
+                    categories.forEach(cat => cat.classList.remove('hide-category'));
+                } else {
+                    categories.forEach(cat => {
+                        if (cat.dataset.category === category) {
+                            cat.classList.remove('hide-category');
+                        } else {
+                            cat.classList.add('hide-category');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('faqSearchInput');
+        const allFaqs = document.querySelectorAll('.faq-item');
+        const searchContainer = document.getElementById('searchResultsContainer');
+
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                if (searchTerm === '') {
+                    searchContainer.innerHTML = '';
+                    allFaqs.forEach(faq => faq.classList.remove('hide-faq'));
+                    categories.forEach(cat => cat.classList.remove('hide-category'));
+                    document.querySelector('.faq-tab[data-category="all"]').click();
+                    return;
+                }
+                
+                let results = [];
+                allFaqs.forEach(faq => {
+                    const question = faq.querySelector('.faq-question span').textContent.toLowerCase();
+                    const answer = faq.querySelector('.faq-answer p').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        results.push(faq);
+                        faq.classList.remove('hide-faq');
+                    } else {
+                        faq.classList.add('hide-faq');
+                    }
+                });
+                
+                categories.forEach(cat => {
+                    const visibleFaqs = cat.querySelectorAll('.faq-item:not(.hide-faq)');
+                    if (visibleFaqs.length === 0) {
+                        cat.classList.add('hide-category');
+                    } else {
+                        cat.classList.remove('hide-category');
+                    }
+                });
+                
+                if (results.length === 0) {
+                    searchContainer.innerHTML = `<div class="no-results"><i class="fas fa-search"></i><h3>No results found</h3><p>We couldn't find any questions matching "${searchTerm}".<br>Please try a different search term or contact our support team.</p><a href="contact.html" class="btn-primary" style="margin-top: 20px; display: inline-block;">Contact Support</a></div>`;
+                } else {
+                    searchContainer.innerHTML = `<div class="search-results-header"><i class="fas fa-search"></i> Found ${results.length} result(s) for "${searchTerm}"</div>`;
+                }
+            });
+        }
+
+        // Scroll Animation Observer
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animatedElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
