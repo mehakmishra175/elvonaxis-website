@@ -201,7 +201,7 @@ body {
     position: relative;
     overflow: hidden;
     background: linear-gradient(rgba(5, 15, 35, 0.78), rgba(5, 15, 35, 0.78)),
-                url('globe-business.jpg');
+                url('images/globe-business.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -389,35 +389,35 @@ body {
 
 .about-hero {
     background: linear-gradient(rgba(5, 15, 35, 0.85), rgba(5, 15, 35, 0.85)),
-                url('about-bg.jpg');
+                url('images/about-bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .services-hero {
     background: linear-gradient(rgba(5, 15, 35, 0.85), rgba(5, 15, 35, 0.85)),
-                url('services-bg.jpg');
+                url('images/services-bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .faq-hero {
     background: linear-gradient(rgba(5, 15, 35, 0.85), rgba(5, 15, 35, 0.85)),
-                url('faq-bg.jpg');
+                url('images/faq-bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .contact-hero {
     background: linear-gradient(rgba(5, 15, 35, 0.85), rgba(5, 15, 35, 0.85)),
-                url('contact-bg.jpg');
+                url('images/contact-bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .dpiit-hero {
     background: linear-gradient(rgba(5, 15, 35, 0.85), rgba(5, 15, 35, 0.85)),
-                url('dpiit-bg.jpg');
+                url('images/diit-bg.jpg');
     background-size: cover;
     background-position: center;
 }
